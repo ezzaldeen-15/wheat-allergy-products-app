@@ -1,0 +1,106 @@
+.header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logo h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex: 1;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
+}
+
+.nav a:hover {
+  opacity: 0.8;
+}
+
+.cart-link {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cart-link:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* RTL Support */
+:global(.rtl) .header-container {
+  flex-direction: row-reverse;
+}
+
+:global(.rtl) .nav {
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 1024px) {
+  .logo h1 {
+    font-size: 1rem;
+  }
+
+  .nav {
+    gap: 1rem;
+  }
+
+  .nav a {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .logo h1 {
+    font-size: 0.9rem;
+  }
+
+  .nav {
+    gap: 0.8rem;
+    order: 3;
+    flex-basis: 100%;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+}
